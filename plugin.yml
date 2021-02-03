@@ -1,8 +1,0 @@
-name: LevellingWeapons
-version: 1.0
-author: Panischer
-api-version: 1.16
-main: de.Panischer.Main
-commands:
-   setlevel:
-      description: /setlevel <amount>
