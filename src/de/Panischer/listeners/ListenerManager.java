@@ -203,7 +203,7 @@ public class ListenerManager implements Listener {
     @EventHandler
     public void onBlockDamage(BlockDamageEvent event) {
         if (ConfigManager.useOwnerBinding()) {
-            if (LevelManager.getOwner(event.getPlayer().getInventory().getItemInMainHand()).equals("§7- §c" + event.getPlayer().getName() + " §7-")) {
+            if (LevelManager.getOwner(event.getItemInHand()).equals("§7- §c" + event.getPlayer().getName() + " §7-")) {
                 //Pickaxe
                 if (event.getPlayer().getInventory().getItemInMainHand().getType().toString().contains("PICKAXE")) {
                     if (LevelManager.getLevels(event.getItemInHand()) > 0) {

@@ -28,6 +28,16 @@ public class ItemPickupListener implements Listener {
                 }
                 im.setLore(lore);
                 is.setItemMeta(im);
+            } else if (!is.getItemMeta().hasLore()) {
+                ItemMeta im = is.getItemMeta();
+                lore.add("");
+                lore.add("§7Level §f1");
+                lore.add("§7XP §f0 §7/ §f10");
+                if (ConfigManager.useOwnerBinding()) {
+                    lore.add("§7- §c" + event.getPlayer().getName() + " §7-");
+                }
+                im.setLore(lore);
+                is.setItemMeta(im);
             }
         }
     }

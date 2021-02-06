@@ -76,12 +76,14 @@ public class LevelManager {
 
     public static String getOwner(ItemStack is) {
         if (is.hasItemMeta()) {
-            if (is.getItemMeta().getLore().get(3) != null) {
-                ItemMeta im = is.getItemMeta();
-                return im.getLore().get(3);
+            if (is.getItemMeta().hasLore()) {
+                return is.getItemMeta().getLore().get(3);
+            } else {
+                return "none";
             }
+        } else {
+            return "none";
         }
-        return "none";
     }
 
     public static int getCurrentXP(ItemStack is) {
