@@ -1,0 +1,14 @@
+name: LevellingWeapons
+version: 1.0
+author: Panischer
+api-version: 1.16
+main: de.Panischer.Main
+commands:
+   getlevel:
+      description: /getlevel <amount>
+   lwreload:
+      description: /lwreload
+   fix:
+      description: /fix
+   iteminfo:
+      description: /iteminfo
